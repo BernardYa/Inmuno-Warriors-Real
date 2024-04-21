@@ -1,25 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
-public class spawn_enemy : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
     [SerializeField]
     private GameObject _enemyPrefab;
 
     [SerializeField]
-    private float _minimumSpawnTime;
+    private float _minumumSpawnTime;
 
     [SerializeField]
     private float _maximumSpawnTime;
 
-
     private float _timeUntilSpawn;
+
     // Start is called before the first frame update
     void Awake()
     {
-        SetTimeUntilSpawn(); 
+        SetTimeUntilSpawn();
     }
 
     // Update is called once per frame
@@ -28,14 +27,14 @@ public class spawn_enemy : MonoBehaviour
         _timeUntilSpawn -= Time.deltaTime;
 
         if (_timeUntilSpawn <= 0)
+        {
             Instantiate(_enemyPrefab, transform.position, Quaternion.identity);
-        SetTimeUntilSpawn();
-
+            SetTimeUntilSpawn();
+        }
     }
-
+    
     private void SetTimeUntilSpawn()
     {
-        _ = _timeUntilSpawn - Random.Range(_minimumSpawnTime, _maximumSpawnTime);
-
+        _timeUntilSpawn = Random.Range(_minumumSpawnTime, _maximumSpawnTime);
     }
 }
