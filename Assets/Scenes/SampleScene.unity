@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfe280b7eb9d92b44ae8644f2d7d4cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 0.01
+  velocidad: 0.001
   destino: {fileID: 630789437}
 --- !u!1 &630789435
 GameObject:
@@ -243,7 +243,7 @@ MonoBehaviour:
   teclaAbajo: 115
   teclaDerecha: 100
   teclaIzquierda: 97
-  velocidad: 0.01
+  velocidad: 0.05
 --- !u!1 &1319649388
 GameObject:
   m_ObjectHideFlags: 0
