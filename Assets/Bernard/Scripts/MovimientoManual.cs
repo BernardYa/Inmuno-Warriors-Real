@@ -8,6 +8,7 @@ public class MovimientoManual : MonoBehaviour
     [SerializeField] KeyCode teclaAbajo;
     [SerializeField] KeyCode teclaDerecha;
     [SerializeField] KeyCode teclaIzquierda;
+    
 
     [SerializeField] float velocidad = 0.01f;
 
